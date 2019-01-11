@@ -1,14 +1,15 @@
 <div class="container">
   <h1>Create Quote</h1>
+  <hr>
   <div class="row">
     <div class="col-md-6">
   <form #userForm="ngForm">
-    <hr>
+
     <!-- {{userModel | json}} -->
     <div class="form-group">
       <label>Custom Quote</label>
       <textarea id="" cols="70" rows="5" required #quote = "ngModel" [class.is-invalid] ="quote.invalid && quote.touched" class="form-control" name="quote" [(ngModel)]="userModel.quote">
-        
+
       </textarea>
       <small class = "text-danger" [class.d-none] = "quote.valid || quote.untouched ">Input your quote here</small>
     </div>
@@ -26,7 +27,7 @@
 
 
 
-    
+
     <button [disabled] ="userForm.form.invalid" class="btn btn-primary" type="submit">Create Quote</button>
 
 
@@ -46,6 +47,6 @@
 
 </div>
 <!-- end of col 2 -->
-</div> 
+</div>
 <!-- end of row -->
 </div>

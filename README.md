@@ -1,27 +1,36 @@
-# Quotes
+# QUOTE
+A website that allows users to create their own quotes, view other quotes as well as vote
+ https://nimomaina.github.io/quote/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+## By Wairimu Maina
+A student at Moringa School and an aspiring software developer.
 
-## Development server
+## Description
+Quote is a site that allows users to create their own quotes and publish. At the same time they can upvote or downvote other quotes and see the most voted quote.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Behaviour Driven Development
+|Behaviour                           |Specification|
+|:--------------------------------------|:-------------------------------------------------|
 
-## Code scaffolding
+## Setup/Installation Requirements
+* Have knowledge of Github, HTML, BOOTSTRAP, JAVASCRIPT, ANGULAR and CSS.
+* You need to install a text editor like atom, Git, and Chrome
+* Git clone the repository at https://github.com/nimomaina/quote.git
+* change the directory on your terminal to open the folder; cd quote
+* open index.html on atom or other text editor.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Known Bugs
+None known at the moment.
 
-## Build
+## Technologies Used
+* HTML
+* Bootstrap
+* CSS
+* JavaScript
+* Angular
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Support and contact details
+Incase of clarification email me at nimomaina.nm@gmail.com
+## License
+*GLP*
+Copyright (c) 2018 **Wairimu Maina**
