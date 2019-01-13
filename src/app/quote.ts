@@ -1,5 +1,4 @@
 export class Quote {
-    constructor(  public quote:string, public author:string, public publisher:string){     
+    constructor(  public custom:string, public author:string, public publisher:string){     
     }
 }
-
