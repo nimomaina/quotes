@@ -32,11 +32,10 @@
     <!-- end of col 1 -->
     <div class="col-md-6">
       <ul>
-        <div *ngFor="let quote of quotes">
-
-
+        <div *ngFor="let quote of quotes; let i = index">
         <li >{{quote.quote}}</li>
-        <app-details [quote]='quote'></app-details>
+        <button (click) = 'toggleDetails(i)'>Details</button>
+        <app-details *ngIf  = "quote.showDetails"[quote]='quote'></app-details>
         </div>
       </ul>
 

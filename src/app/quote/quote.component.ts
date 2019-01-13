@@ -11,7 +11,10 @@ export class QuoteComponent implements OnInit {
     new Quote ('Dirt biking is life','Osman Sabir','Hassan'),
     new Quote('No guts no story','Chris Brady','Chris Brady'),
     new Quote('Giving is receiving','Ali Omar','Omar'),
-  ];
+  ]
+  toggleDetails(index){
+    this.quotes[index].showDetails =!   this.quotes[index].showDetails;
+  }
 
   userModel = new Quote('', '','');
 
