@@ -3,39 +3,15 @@
   <hr>
   <div class="row">
     <div class="col-md-6">
-      <form #userForm="ngForm">
-
-        <!-- {{userModel | json}} -->
-        <div class="form-group">
-          <label>Custom Quote</label>
-          <textarea id="" cols="70" rows="5" required #quote="ngModel" [class.is-invalid]="quote.invalid && quote.touched" class="form-control" name="quote" [(ngModel)]="userModel.quote">
-
-      </textarea>
-          <small class="text-danger" [class.d-none]="quote.valid || quote.untouched ">Input your quote here</small>
-        </div>
-
-        <div class="form-group">
-          <label>Author</label>
-          <input type="text" required #author="ngModel" [class.is-invalid]="author.invalid && author.touched" class="form-control" name="author" [(ngModel)]="userModel.author">
-          <small class="text-danger" [class.d-none]="author.valid || author.untouched ">Please fill in the Author</small>
-        </div>
-        <div class="form-group">
-          <label>Publisher</label>
-          <input type="text" required #publisher="ngModel" [class.is-invalid]="publisher.invalid && publisher.touched" class="form-control" name="publisher" [(ngModel)]="userModel.publisher">
-          <small class="text-danger" [class.d-none]="publisher.valid || publisher.untouched ">Please fill in the publisher's name</small>
-        </div>
-        <button [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit">Create Quote</button>
-
-
-      </form>
+      <app-quote-form (createQuote)="createNewQuote($event)"></app-quote-form>
     </div>
     <!-- end of col 1 -->
     <div class="col-md-6">
       <ul>
         <div *ngFor="let quote of quotes; let i = index">
-        <li >{{quote.quote}} created on {{quote.quotedDate | date}}</li>
-        <button (click) = 'toggleDetails(i)'>Details</button>
-        <app-details *ngIf  = "quote.showDetails"[quote]='quote' (isIrrelevant) = 'irrelevantQuote($event, i)'></app-details>
+          <li>{{quote.quote}} created on {{quote.quotedDate | date}}</li>
+          <button (click)='toggleDetails(i)'>Details</button>
+          <app-details *ngIf="quote.showDetails" [quote]='quote' (isIrrelevant)='irrelevantQuote($event, i)'></app-details>
         </div>
       </ul>
 

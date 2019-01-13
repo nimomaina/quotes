@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Quote} from '../quote';
 @Component({
   selector: 'app-quote',
@@ -8,9 +8,9 @@ import {Quote} from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote ('Dirt biking is life','Osman Sabir','Hassan', new Date (2019,2,3)),
-    new Quote('No guts no story','Chris Brady','Chris Brady', new Date (2019,3,4)),
-    new Quote('Giving is receiving','Ali Omar','Omar', new Date (2019,5,8)),
+    new Quote ('Dirt biking is life','Osman Sabir','Hassan', new Date (2018,2,3)),
+    new Quote('No guts no story','Chris Brady','Chris Brady', new Date (2018,3,4)),
+    new Quote('Giving is receiving','Ali Omar','Omar', new Date (2018,5,8)),
   ]
   toggleDetails(index){
     this.quotes[index].showDetails =!   this.quotes[index].showDetails;
@@ -21,8 +21,13 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index,1);
     }
   }
+  createNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id=quote.length+1;
+    quote.quotedDate = new Date(quote.quotedDate)
+    this.quotes.push(quote)
+  }
 
-  userModel = new Quote('', '','',new Date);
 
   constructor() { }
 

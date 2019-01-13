@@ -4,6 +4,7 @@
 <p>
 {{quote.publisher}}
 </p>
+<p>Created {{quote.quotedDate | datePassed}} ago</p>
 <button (click) = 'quoteIrrelevant(true)'>Delete</button>
 <!--
 <div id="myrow" class="row" *ngFor="let quote of quotes; let i = index">

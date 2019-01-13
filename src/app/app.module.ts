@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { DetailsComponent } from './details/details.component';
 import { DatePassedPipe } from './date-passed.pipe';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     DetailsComponent,
-    DatePassedPipe
+    DatePassedPipe,
+    QuoteFormComponent
   ],
   imports: [
     BrowserModule,
