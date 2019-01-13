@@ -8,15 +8,21 @@ import {Quote} from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote ('Dirt biking is life','Osman Sabir','Hassan'),
-    new Quote('No guts no story','Chris Brady','Chris Brady'),
-    new Quote('Giving is receiving','Ali Omar','Omar'),
+    new Quote ('Dirt biking is life','Osman Sabir','Hassan', new Date (2019,2,3)),
+    new Quote('No guts no story','Chris Brady','Chris Brady', new Date (2019,3,4)),
+    new Quote('Giving is receiving','Ali Omar','Omar', new Date (2019,5,8)),
   ]
   toggleDetails(index){
     this.quotes[index].showDetails =!   this.quotes[index].showDetails;
   }
 
-  userModel = new Quote('', '','');
+  irrelevantQuote(isIrrelevant,index){
+    if (isIrrelevant){
+      this.quotes.splice(index,1);
+    }
+  }
+
+  userModel = new Quote('', '','',new Date);
 
   constructor() { }
 

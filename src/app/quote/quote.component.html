@@ -33,9 +33,9 @@
     <div class="col-md-6">
       <ul>
         <div *ngFor="let quote of quotes; let i = index">
-        <li >{{quote.quote}}</li>
+        <li >{{quote.quote}} created on {{quote.quotedDate | date}}</li>
         <button (click) = 'toggleDetails(i)'>Details</button>
-        <app-details *ngIf  = "quote.showDetails"[quote]='quote'></app-details>
+        <app-details *ngIf  = "quote.showDetails"[quote]='quote' (isIrrelevant) = 'irrelevantQuote($event, i)'></app-details>
         </div>
       </ul>
 
