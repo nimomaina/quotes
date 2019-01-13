@@ -1,27 +1,13 @@
-<p>
+<footer>
+  <br>
+<p>Author:
 {{quote.author}}
 </p>
-<p>
+<p> Published by:
 {{quote.publisher}}
 </p>
-<p>Created {{quote.quotedDate | datePassed}} ago</p>
-<button (click) = 'quoteIrrelevant(true)'>Delete</button>
-<!--
-<div id="myrow" class="row" *ngFor="let quote of quotes; let i = index">
-		<div class="col-md-4" id="side">
-		</div>
-		<div class="col-md-8" id="content">
-			<blockquote class="blockquote text-center">
-				<p appHighlight *ngIf="i == 0 && quote.upvotes>=1; else paragraphthis">{{quote.quote}}.</p>
-				<ng-template #paragraphthis>
-				{{quote.quote}}
-				</ng-template>
-
-			<footer id="auth" class="blockquote-footer">{{quote.author }}<cite title="author"> author</cite></footer>
-		<footer>posted by {{quote.publisher}} -- {{quote.dateAdded|lapseTime}} on {{quote.dateAdded|date}}</footer>
-	</blockquote>
-	<button class="btn btn-success" (click)="voteUp(i)">upvote</button>
-	<span>{{quote.upvotes}}</span>
-	<button class="btn btn-default" (click)="voteDown(i)">downvote</button>
-	<span>{{quote.downvotes}}</span>
-	<button class="btn btn-danger" (click)="delete(i)">delete</button> -->
+<p>Created on {{quote.quotedDate | date}} ~ {{quote.quotedDate | datePassed}} days ago</p>
+<button class="button btn btn-danger" id="delete"(click)='quoteIrrelevant(true)'>Delete Quote <i class="fas fa-trash"></i></button>
+<button class="vote"(click)="upvote.emit()"><i class=" fas fa-heart"></i></button>  {{quote.upvote}}
+    <button class="vote" (click)="downvote.emit()"><i class="fas fa-heartbeat"></i></button> {{quote.downvote}}
+</footer>

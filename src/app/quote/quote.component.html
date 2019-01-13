@@ -7,13 +7,18 @@
     </div>
     <!-- end of col 1 -->
     <div class="col-md-6">
-      <ul>
-        <div *ngFor="let quote of quotes; let i = index">
-          <li>{{quote.quote}} created on {{quote.quotedDate | date}}</li>
-          <button (click)='toggleDetails(i)'>Details</button>
+
+      <div *ngFor="let quote of quotes; let i = index" class="quote">
+        <blockquote>
+        <h5> <i class="fas fa-quote-left"></i> {{quote.quote}} <i class="fas fa-quote-right"></i></h5>
+        <br>
+        <br>
+          <button class="btn btn-success" (click)='toggleDetails(i)'>More Details</button>
           <app-details *ngIf="quote.showDetails" [quote]='quote' (isIrrelevant)='irrelevantQuote($event, i)'></app-details>
-        </div>
-      </ul>
+          <br>
+</blockquote>
+      </div>
+
 
     </div>
     <!-- end of col 2 -->

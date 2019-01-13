@@ -8,6 +8,7 @@ import { DetailsComponent } from './details/details.component';
 import { DatePassedPipe } from './date-passed.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

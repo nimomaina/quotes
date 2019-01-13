@@ -17,6 +17,8 @@ export class DatePassedPipe implements PipeTransform {
 
       if (dateCounter >= 1 &&todayWithNoTime> value  ){
           return dateCounter;
+      } else{
+        return 0;
       }
     }
 

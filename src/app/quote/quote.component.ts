@@ -8,9 +8,9 @@ import {Quote} from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote ('Dirt biking is life','Osman Sabir','Hassan', new Date (2018,2,3)),
-    new Quote('No guts no story','Chris Brady','Chris Brady', new Date (2018,3,4)),
-    new Quote('Giving is receiving','Ali Omar','Omar', new Date (2018,5,8)),
+    new Quote ('Dirt biking is life','Osman Sabir','Hassan', new Date (2018,2,3), 0,0),
+    new Quote('No guts no story','Chris Brady','Chris Brady', new Date (2018,3,4), 0,0),
+    new Quote('Giving is receiving','Ali Omar','Omar', new Date (2018,5,8), 0,0),
   ]
   toggleDetails(index){
     this.quotes[index].showDetails =!   this.quotes[index].showDetails;
@@ -28,6 +28,33 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote)
   }
 
+
+
+
+  highestArr:any[]
+    highestVotes() {
+      this.highestArr = this.quotes.map(element => {
+        return element.upvote;
+      });
+      let numHigh = Math.max(...this.highestArr);
+      this.quotes.forEach(element => {
+        if(element.upvote === numHigh) {
+          element.highestVote = true;
+        } else {
+          element.highestVote = false;
+        }
+      });
+
+    }
+
+    downVote(i) {
+      this.quotes[i].downvote++;
+    }
+    upVote(i) {
+      this.quotes[i].upvote++;
+      this.highestVotes();
+
+    }
 
   constructor() { }
 

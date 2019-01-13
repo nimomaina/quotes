@@ -1,2 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+.quote{
+  width: auto;
+   border: 10px solid #D3D3D3;
+   padding: 10px;
+
+}
+.btn{
+  margin-bottom: 5px;
+}
+.button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+
+}
+.fa-heart{
+  color: red;
+
+}
+.vote{
+  padding: 0;
+border: none;
+background: none;
+display: inline;
+}
+#delete{
+  margin-right: 100px;
+}
+h5{
+  font-family:"Times New Roman", 'Ancient Runes', serif;
+}
