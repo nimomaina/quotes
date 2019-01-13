@@ -32,8 +32,12 @@
     <!-- end of col 1 -->
     <div class="col-md-6">
       <ul>
-        <li *ngFor="let quote of quotes"><textarea name="name" rows="4" cols="30">{{quote.custom}}</textarea></li>
-        <app-details [quote] = 'quote'></app-details>
+        <div *ngFor="let quote of quotes">
+
+
+        <li >{{quote.quote}}</li>
+        <app-details [quote]='quote'></app-details>
+        </div>
       </ul>
 
     </div>

@@ -9,7 +9,7 @@ export class QuoteComponent implements OnInit {
 
   quotes = [
     new Quote ('Dirt biking is life','Osman Sabir','Hassan'),
-    new Quote('No guts, no story','Chris Brady','Chris Brady'),
+    new Quote('No guts no story','Chris Brady','Chris Brady'),
     new Quote('Giving is receiving','Ali Omar','Omar'),
   ];
 
