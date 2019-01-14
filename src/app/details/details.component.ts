@@ -16,32 +16,7 @@ export class DetailsComponent implements OnInit {
   }
   @Output() upvote = new EventEmitter();
   @Output() downvote = new EventEmitter();
-  //
-  // highestArr:any[]
-  //   highestVotes() {
-  //     this.highestArr = this.quotes.map(element => {
-  //       return element.upvote;
-  //     });
-  //     let numHigh = Math.max(...this.highestArr);
-  //     this.quotes.forEach(element => {
-  //       if(element.upvote === numHigh) {
-  //         element.highestVote = true;
-  //       } else {
-  //         element.highestVote = false;
-  //       }
-  //     });
-  //
-  //   }
-  //
-  //   downVote(i) {
-  //     this.quotes[i].downvote++;
-  //   }
-  //   upVote(i) {
-  //     this.quotes[i].upvote++;
-  //     this.highestVotes();
-  //
-  //   }
-
+  
   constructor() { }
 
   ngOnInit() {
