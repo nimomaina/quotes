@@ -11,15 +11,14 @@
 
       <div *ngFor="let quote of quotes; let i = index" class="quote">
         <blockquote appHighlight>
-        <h5> <i class="fas fa-quote-left"></i> {{quote.quote}} <i class="fas fa-quote-right"></i></h5>
-        <br>
-        <br>
+          <h5> <i class="fas fa-quote-left"></i> {{quote.quote}} <i class="fas fa-quote-right"></i></h5>
+          <br>
+          <br>
           <button class="btn btn-success" (click)='toggleDetails(i)'>More Details</button>
           <app-details *ngIf="quote.showDetails" [quote]='quote' (isIrrelevant)='irrelevantQuote($event, i)'></app-details>
           <br>
-</blockquote>
+        </blockquote>
       </div>
-
 
     </div>
     <!-- end of col 2 -->
