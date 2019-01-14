@@ -1,13 +1,13 @@
 <footer>
   <br>
-<p>Author:
-{{quote.author}}
-</p>
-<p> Published by:
-{{quote.publisher}}
-</p>
-<p>Created on {{quote.quotedDate | date}} ~ {{quote.quotedDate | datePassed}} days ago</p>
-<button class="button btn btn-danger" id="delete"(click)='quoteIrrelevant(true)'>Delete Quote <i class="fas fa-trash"></i></button>
-<button class="btn upvote" (click) = 'upVote()'><i class=" fas fa-heart"></i>  </button> {{quote.upvote}}
-    <button class="btn downvote"><i class="fas fa-heartbeat"></i></button> {{quote.downvote}}
+  <p>Author:
+    {{quote.author}}
+  </p>
+  <p> Published by:
+    {{quote.publisher}}
+  </p>
+  <p>Created on {{quote.quotedDate | date}} ~ {{quote.quotedDate | datePassed}} days ago</p>
+  <button class="button btn btn-danger" id="delete" (click)='quoteIrrelevant(true)'>Delete Quote <i class="fas fa-trash"></i></button>
+  <button class="btn upvote" (click)='like()'><i class=" fas fa-heart"></i> {{upVote}} </button>
+  <button class="btn downvote" (click)='dislike()'><i class="fas fa-heartbeat"></i> {{downVote}}</button>
 </footer>
