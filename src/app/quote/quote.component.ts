@@ -10,7 +10,7 @@ export class QuoteComponent implements OnInit {
   quotes = [
 
   new Quote ('Dirt biking is life','Osman Sabir','Hassan', new Date (2018,2,3)),
-  new Quote('No guts no story','Chris Brady','Chris Brady', new Date (2018,3,4)),
+  new Quote('No guts, no story','Chris Brady','Chris Brady', new Date (2018,3,4)),
 ]
   toggleDetails(index){
     this.quotes[index].showDetails =!   this.quotes[index].showDetails;
