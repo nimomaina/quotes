@@ -4,6 +4,7 @@
   width: auto;
    border: 10px solid #D3D3D3;
    padding: 10px;
+   border-radius: 10px;
 
 }
 .btn{
@@ -26,8 +27,16 @@
   color: red;
 
 }
-.vote{
-  padding: 0;
+.upvote{
+  padding:5px;
+  margin-right: 2px;
+border: none;
+background: none;
+display: inline;
+}
+.downvote{
+  padding:5px;
+  margin-left: 2px;
 border: none;
 background: none;
 display: inline;
@@ -36,5 +45,7 @@ display: inline;
   margin-right: 100px;
 }
 h5{
-  font-family:"Times New Roman", 'Ancient Runes', serif;
+  /* font-family:"Times New Roman", 'Ancient Runes', serif; */
+  font-style: italic;
+  font-family: georgia;
 }
