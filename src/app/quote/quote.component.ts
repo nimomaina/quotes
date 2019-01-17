@@ -19,7 +19,7 @@ export class QuoteComponent implements OnInit {
   irrelevantQuote(isIrrelevant,index){
     if (isIrrelevant){
       this.quotes.splice(index,1);
-    }
+    }''
   }
   createNewQuote(quote){
     let quoteLength = this.quotes.length;
